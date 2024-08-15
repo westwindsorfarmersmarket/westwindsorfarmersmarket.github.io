@@ -24,5 +24,8 @@ function validate() {
         alert("please pick a vendor!");
         return;
     }
+
+    document.getElementById("653425285").value = parseInt(document.getElementById("653425285").value) * 5;
+    document.getElementById("860974514").value = document.getElementById("860974514").placeholder;
     document.getElementById("main").submit();
 }
