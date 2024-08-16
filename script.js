@@ -16,6 +16,7 @@ function updateTotal() {
     if (gfb == "") {
         gfb == "0";
     }
+    document.getElementById("totalText").innerText = "$" + (parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb));
     document.getElementById("860974514").placeholder = parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb);
 }
 
