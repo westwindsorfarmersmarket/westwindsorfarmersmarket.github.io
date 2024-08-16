@@ -1,3 +1,9 @@
+.summary-link {
+    font-size: 12pt;
+    text-decoration: none;
+    color: blue;
+}
+
 fieldset {
     padding: auto;
     margin: auto;
@@ -27,7 +33,7 @@ fieldset {
 }
 
 .tbar {
-    /* padding-bottom: 12px; */
+    padding-bottom: 12px;
     font-size: 24pt;
     font-family: 'docs-Roboto', Helvetica, Arial, sans-serif;
     letter-spacing: 0;
