@@ -9,3 +9,7 @@ function noResponses() {
 function moreResponses() {
     document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/13FllM0R-sylfZsDyvUDmW-znNi5WtQlMVNUKdoEiI8s/gviz/tq?tqx=out:html&sheet=Summary&tq=select * where G > 1";
 }
+
+function total() {
+    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/13FllM0R-sylfZsDyvUDmW-znNi5WtQlMVNUKdoEiI8s/gviz/tq?tqx=out:html&sheet=Summary&tq=select * where A = %22TOTAL%22";
+}
