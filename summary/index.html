@@ -6,12 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <a href="../"><button class="back-btn">Back to Form</button></a>
+        
         <div class="content">
-            <button onclick="fullSummary()">full summary (default)</button>
-            <button onclick="noResponses()">vendors with 0 responses</button>
-            <button onclick="moreResponses()">vendors with more than 1 response</button>
-            <button onclick="total()">just the total</button>
+            <table id="summary">
+                <tr>
+                    <td colspan="4"><a href="../"><button class="back-btn">Back to Form</button></a></td>
+                </tr>
+                <tr>
+                    <td><button onclick="fullSummary()">full summary (default)</button></td>
+                    <td><button onclick="noResponses()">vendors with 0 responses</button></td>
+                    <td><button onclick="moreResponses()">vendors with more than 1 response</button></td>
+                    <td><button onclick="total()">just the total</button></td>
+                </tr>
+            </table>
+            
             <iframe id="frame" src="https://docs.google.com/spreadsheets/d/13FllM0R-sylfZsDyvUDmW-znNi5WtQlMVNUKdoEiI8s/gviz/tq?tqx=out:html&sheet=Summary"></iframe>
         </div>
     </body>
