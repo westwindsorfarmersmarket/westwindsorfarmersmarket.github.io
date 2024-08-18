@@ -8,13 +8,16 @@ function updateTotal() {
     var snap = document.getElementById("1010502183").value;
     var gfb = document.getElementById("1442430695").value;
     if (mb == "") {
-        mb == "0";
+        document.getElementById("653425285").value = "0";
+        mb = 0;
     }
     if (snap == "") {
-        snap == "0";
+        document.getElementById("1010502183").value = "0";
+        snap = 0;
     }
     if (gfb == "") {
-        gfb == "0";
+        gfb = document.getElementById("1442430695").value = "0";
+        gfb = 0;
     }
     document.getElementById("totalText").innerText = "$" + (parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb));
     document.getElementById("860974514").placeholder = parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb);
