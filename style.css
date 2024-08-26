@@ -78,6 +78,11 @@ div {
     min-height: 50px;
 }
 
+.btn-secondary {
+    width: 10%;
+    min-height: 10px;
+}
+
 textarea {
     width: 100%;
 }
