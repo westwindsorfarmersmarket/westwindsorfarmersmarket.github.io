@@ -30,6 +30,8 @@ function validate() {
     }
 
     document.getElementById("653425285").value = parseInt(document.getElementById("653425285").value) * 5;
+    document.getElementById("1010502183").value = parseInt(document.getElementById("1010502183").value);
+    document.getElementById("1442430695").value = parseInt(document.getElementById("1442430695").value);
     document.getElementById("860974514").value = document.getElementById("860974514").placeholder;
     document.getElementById("main").submit();
 }
