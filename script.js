@@ -50,7 +50,7 @@ function checkRent() {
 
 function getRentDueTest(){
     var vendorName = document.getElementById("1952425390").value;
-    // vendorName = encodeURIComponent(vendorName);
+    vendorName = encodeURIComponent(vendorName);
     var url = "https://docs.google.com/spreadsheets/d/1z82wLqfuOacuHxwXeRoMhLzRnrUlEgKM0wgvSEZLgdw/gviz/tq?tqx=out:html&tq=select A, B, C where A=%22"+vendorName+"%22";
     document.getElementById("rentFrame").src = url;
 }
