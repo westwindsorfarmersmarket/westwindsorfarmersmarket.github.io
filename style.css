@@ -67,6 +67,17 @@ div {
     unicode-bidi: isolate;
 }
 
+#rentFrame {
+    border: 0;
+    max-height: 100%;
+    position: absolute;
+}
+
+.frameDiv {
+    position: relative;
+    padding-bottom: 65px;
+}
+
 .content {
     margin: auto;
     max-width: 90vw;

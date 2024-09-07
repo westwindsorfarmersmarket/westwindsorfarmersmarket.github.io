@@ -21,7 +21,7 @@
                         <fieldset>
                             <legend for="1952425390">Vendor Name</legend>
                             <div class="form-group">
-                                <select id="1952425390" name="entry.1123002809" class="form-control">
+                                <select id="1952425390" oninput="getRentDueTest()" name="entry.1123002809" class="form-control">
                                     <option value=""></option>
                                     <option value="24 Karrot Spread">24 Karrot Spread</option>
                                     <option value="Barking Good Bakery">Barking Good Bakery</option>
@@ -33,7 +33,7 @@
                                     <option value="Butter Lust">Butter Lust</option>
                                     <option value="Cap-Sai-Cin">Cap-Sai-Cin</option>
                                     <option value="Catalina Empanadas">Catalina Empanadas</option>
-                                    <option value="Cherry grove Farm">Cherry grove Farm</option>
+                                    <option value="Cherry Grove Farm">Cherry Grove Farm</option>
                                     <option value="Chia Sin">Chia Sin</option>
                                     <option value="Chickadee Creek Farm">Chickadee Creek Farm</option>
                                     <option value="Contemplate Kitchen">Contemplate Kitchen</option>
@@ -41,13 +41,13 @@
                                     <option value="cool-n-airy (Exallante Woodworks)">cool-n-airy (Exallante Woodworks)</option>
                                     <option value="cool-n-airy (Kaitlyn Pickett &amp; Ed Duke)">cool-n-airy (Kaitlyn Pickett &amp; Ed Duke)</option>
                                     <option value="cool-n-airy (Kelly Slater)">cool-n-airy (Kelly Slater)</option>
-                                    <option value="cool-n-airy (Nedley turns wood)">cool-n-airy (Nedley turns wood)</option>
-                                    <option value="cool-n-airy (Off the knife woodworking)">cool-n-airy (Off the knife woodworking)</option>
-                                    <option value="cool-n-airy (Ric stand)">cool-n-airy (Ric stand)</option>
+                                    <option value="cool-n-airy (Nedley Turns Wood)">cool-n-airy (Nedley Turns Wood)</option>
+                                    <option value="cool-n-airy (Off the Knife Woodworking)">cool-n-airy (Off the Knife Woodworking)</option>
+                                    <option value="cool-n-airy (Ric Stand)">cool-n-airy (Ric Stand)</option>
                                     <option value="cool-n-airy (Wheeling Gypsy)">cool-n-airy (Wheeling Gypsy)</option>
                                     <option value="cool-n-airy (Yard Sale Press)">cool-n-airy (Yard Sale Press)</option>
                                     <option value="Crumbley Kitchen">Crumbley Kitchen</option>
-                                    <option value="Davidson Exotic (chad Langrehr)">Davidson Exotic (chad Langrehr)</option>
+                                    <option value="Davidson Exotic (Chad Langrehr)">Davidson Exotic (Chad Langrehr)</option>
                                     <option value="Dr. Pickle">Dr. Pickle</option>
                                     <option value="Eats by Ellie">Eats by Ellie</option>
                                     <option value="Flour-ish (Piping Bag Bakery)">Flour-ish (Piping Bag Bakery)</option>
@@ -60,24 +60,24 @@
                                     <option value="Jammin Crepes">Jammin Crepes</option>
                                     <option value="Jeff&#x27;s Organic Produce">Jeff&#x27;s Organic Produce</option>
                                     <option value="Jersey Artisan Co">Jersey Artisan Co</option>
-                                    <option value="Kelly Girl Desserts &amp; pastries">Kelly Girl Desserts &amp; pastries</option>
+                                    <option value="Kelly Girl Desserts &amp; Pastries">Kelly Girl Desserts &amp; Pastries</option>
                                     <option value="Little Balkan">Little Balkan</option>
-                                    <option value="Little Star Foods- GTIEI">Little Star Foods- GTIEI</option>
+                                    <option value="Little Star Foods (GTIEI)">Little Star Foods (GTIEI)</option>
                                     <option value="Local 130 Seafood">Local 130 Seafood</option>
-                                    <option value="LoRE Pasta">LoRE Pasta</option>
+                                    <option value="LoRe Pasta">LoRe Pasta</option>
                                     <option value="Mishti Chocolates (AMSQR)">Mishti Chocolates (AMSQR)</option>
                                     <option value="Moonshot Farm">Moonshot Farm</option>
                                     <option value="Morganics Family Farm">Morganics Family Farm</option>
                                     <option value="Nomad">Nomad</option>
                                     <option value="North Slope">North Slope</option>
-                                    <option value="O&#x27;connor Bakeshop">O&#x27;connor Bakeshop</option>
+                                    <option value="O&#x27;Connor Bakeshop">O&#x27;Connor Bakeshop</option>
                                     <option value="One Compost">One Compost</option>
-                                    <option value="One up One Down Coffee">One up One Down Coffee</option>
+                                    <option value="One Up One Down Coffee">One Up One Down Coffee</option>
                                     <option value="Ornery Acres at Krowicki Farm">Ornery Acres at Krowicki Farm</option>
                                     <option value="Pinneapple Pink">Pinneapple Pink</option>
                                     <option value="Phenix Sharp">Phenix Sharp</option>
                                     <option value="Snapping Turtle Farm">Snapping Turtle Farm</option>
-                                    <option value="so Good Guacamole">so Good Guacamole</option>
+                                    <option value="So Good Guacamole">So Good Guacamole</option>
                                     <option value="Stefan&#x27;s Pure Blend">Stefan&#x27;s Pure Blend</option>
                                     <option value="Sugar Street Bakehouse">Sugar Street Bakehouse</option>
                                     <option value="Tea-For-All">Tea-For-All</option>
@@ -126,7 +126,10 @@
                             <legend for="983936687">Rent Amount</legend>
                             <div class="form-group">
                                 <input id="733774364" type="number" name="entry.733774364" class="form-control" >
-                                <!--input class="btn-secondary" type="button" onclick="checkRent()" name="lookup" value="lookup"-->
+                                <!-- <input class="btn-secondary" type="button" onclick="getRentDueTest()" name="lookup" value="lookup"> -->
+                                <div class="frameDiv">
+                                    <iframe width="100%" max-height="30px" id="rentFrame"></iframe>
+                                </div>
                             </div>
                         </fieldset>
 

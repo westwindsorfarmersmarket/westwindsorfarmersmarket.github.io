@@ -48,27 +48,14 @@ function checkRent() {
 }
 
 
-function getRentDue1(vendor){
-              
-    //working
-    //https://sheets.googleapis.com/v4/spreadsheets/13FllM0R-sylfZsDyvUDmW-znNi5WtQlMVNUKdoEiI8s/values/Summary?valueRenderOption=FORMATTED_VALUE&key=AIzaSyA6gLJfCoxH3OxtpVzw7lWBqNkiEx6noGA
-
-    let SHEET_ID = "13FllM0R-sylfZsDyvUDmW-znNi5WtQlMVNUKdoEiI8s";
-    //let url = "https://sheets.googleapis.com/v4/spreadsheets/" + SHEET_ID + "/:batchUpdate&key=AIzaSyA6gLJfCoxH3OxtpVzw7lWBqNkiEx6noGA";
-    let myurl = "https://sheets.googleapis.com/v4/spreadsheets/"+SHEET_ID+"/values/Static?valueRenderOption=FORMATTED_VALUE&key=AIzaSyA6gLJfCoxH3OxtpVzw7lWBqNkiEx6noGA"
-    jsonString = "";
-
-    $.ajax({ 
-        url: myurl, 
-        type: 'GET', 
-        async: false, 
-        success: function (response) { 
-            jsonString = xhr.responseText;
-        } 
-      }); 
-      alert(jsonString);
-
+function getRentDueTest(){
+    var vendorName = document.getElementById("1952425390").value;
+    vendorName = encodeURIComponent(vendorName);
+    var url = "https://docs.google.com/spreadsheets/d/1z82wLqfuOacuHxwXeRoMhLzRnrUlEgKM0wgvSEZLgdw/gviz/tq?tqx=out:html&tq=select A, B, C where A=%22"+vendorName+"%22";
+    document.getElementById("rentFrame").src = url;
 }
+
+
 
 function getRentDue(vendor){
     let SHEET_ID = "1z82wLqfuOacuHxwXeRoMhLzRnrUlEgKM0wgvSEZLgdw";
@@ -83,7 +70,7 @@ function getRentDue(vendor){
 
     // Set the request header i.e. which type of content you are sending
     xhr.setRequestHeader("Content-Type", "application/json");
-    var rentdue = ""
+    var rentdue = "0"
 
     // Create a state change callback
     xhr.onreadystatechange = function () {
@@ -98,8 +85,10 @@ function getRentDue(vendor){
                 row = json.values[i];
                 // alert(row[0]);
                 if(vendor == row[0]){
-                    // alert("match: "+row[1]+" ")
-                    rentdue = row[1];
+                    // alert("match: "+row[1]+" ");
+                    if (row[1]) {
+                        rentdue = row[1];
+                    }
                 }
              }
                      
