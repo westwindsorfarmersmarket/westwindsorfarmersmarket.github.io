@@ -15,21 +15,27 @@
                 <tr><td colspan="4">&nbsp;</td></tr>
                 <tr>
                     <td><button onclick="fullSummary()">full summary (default)</button></td>
-                    <td><button onclick="noResponses()">vendors with 0 responses</button></td>
-                    <td><button onclick="moreResponses()">vendors with more than 1 response</button></td>
-                    <td><button onclick="total()">only total</button></td>
+                    <td><button onclick="noResponses()">no responses</button></td>
+                    <td><button onclick="moreResponses()">more than one response</button></td>
+                    <td><button onclick="responses()">vendors with responses</button></td>
                 </tr>
                 <tr>
                     <td><button onclick="other()">vendor is Other</button></td>
-                    <td><button onclick="rent()">vendors who paid rent today</button></td>
-                    <td><button onclick="vendorType('CoolnAiry')">cool n airy</button></td>
+                    <td><button onclick="rent()">paid rent today</button></td>
+                    <td><button onclick="vendorType('cool-n-airy')">cool-n-airy</button></td>
                     <td><button onclick="todaysActivity()">todaysActivity</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="vendorType('Farm')">vendor type is farm</button></td>
-                    <td><button onclick="vendorType('Vendor')">default vendor type</button></td>
-                    <td>&nbsp;</td>
+                    <td><button onclick="vendorClassification('G')">GFB Vendors</button></td>
+                    <td><button onclick="vendorClassification('S')">SNAP Vendors</button></td>
+                    <td><button onclick="noActivity()">no activity</button></td>
                     <td><button onclick="vendorMaster()">all farms / vendors</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="vendorsIncorrectlyAcceptedGFB()">Should NOT have Accepted GFB</button></td>
+                    <td><button onclick="vendorsIncorrectlyAcceptedSNAP()">Should NOT have Accepted SNAP</button></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
             </table>
             
