@@ -49,3 +49,7 @@ function vendorClassification(vendorClassification) {
 function vendorMaster() {   
     document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/13FllM0R-sylfZsDyvUDmW-znNi5WtQlMVNUKdoEiI8s/gviz/tq?tqx=out:html&sheet=Static"
 }
+
+function reportingByDate() {
+    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/1bHuWEFBNHenTJvuTioMlF5yDK9ge8BP7/gviz/tq?tqx=out:html&tq=select%20A,sum(F),sum(G),sum(H),sum(B)%20group%20by%20A%20order%20by%20A%20desc%20limit%2012";
+}
