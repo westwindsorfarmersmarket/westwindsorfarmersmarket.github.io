@@ -51,9 +51,9 @@ function vendorMaster() {
 }
 
 function reportingByDate() {
-    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/1bHuWEFBNHenTJvuTioMlF5yDK9ge8BP7/gviz/tq?tqx=out:html&tq=select%20A,sum(L),sum(M),sum(N),COUNT(D)%20group%20by%20A%20order%20by%20A%20desc%20limit%2010";
+    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/1bHuWEFBNHenTJvuTioMlF5yDK9ge8BP7/gviz/tq?tqx=out:html&tq=select%20A,sum(M),sum(N),sum(O),COUNT(D)%20where%20L%20>0%20group%20by%20A%20order%20by%20A%20desc%20limit%2010";
 }
 
 function reportingByVendor() {
-    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/1bHuWEFBNHenTJvuTioMlF5yDK9ge8BP7/gviz/tq?tqx=out:html&tq=select%20D,sum(L),sum(M),sum(N),sum(O)%20group%20by%20D%20order%20by%20D";
+    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/1bHuWEFBNHenTJvuTioMlF5yDK9ge8BP7/gviz/tq?tqx=out:html&tq=select%20D,sum(M),sum(N),sum(O),sum(P)%20group%20by%20D%20order%20by%20D";
 }
