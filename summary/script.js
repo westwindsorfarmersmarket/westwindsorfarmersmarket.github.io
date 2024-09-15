@@ -55,5 +55,5 @@ function reportingByDate() {
 }
 
 function reportingByVendor() {
-    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/1bHuWEFBNHenTJvuTioMlF5yDK9ge8BP7/gviz/tq?tqx=out:html&tq=select%20D,sum(M),sum(N),sum(O),sum(P)%20group%20by%20D%20order%20by%20D";
+    document.getElementById("frame").src = "https://docs.google.com/spreadsheets/d/1bHuWEFBNHenTJvuTioMlF5yDK9ge8BP7/gviz/tq?tqx=out:html&tq=select%20D,sum(M),sum(N),sum(O),sum(P),sum(I)%20group%20by%20D%20order%20by%20D";
 }
