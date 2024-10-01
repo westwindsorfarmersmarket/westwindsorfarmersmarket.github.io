@@ -16,7 +16,7 @@ function updateTotal() {
         snap = 0;
     }
     if (gfb == "") {
-        gfb = document.getElementById("14 q42430695").value = "0";
+        gfb = document.getElementById("1442430695").value = "0";
         gfb = 0;
     }
     document.getElementById("totalText").innerText = "$" + (parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb));
