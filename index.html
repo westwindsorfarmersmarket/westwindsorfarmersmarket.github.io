@@ -97,7 +97,8 @@
                         <fieldset>
                             <legend for="234723171">MB (Count, not dollars)</legend>
                             <div class="form-group">
-                                <input id="653425285" min="0" step="1" oninput="updateTotal()" type="number" name="entry.653425285" class="form-control" value="0" >
+                                <input id="mb" min="0" step="1" oninput="updateTotal()" type="number" class="form-control" value="0" >
+                                <input id="653425285" type="hidden" name="entry.653425285" class="form-control">
                             </div>
                         </fieldset>
 
@@ -119,7 +120,7 @@
                             <legend for="902016795">Total (write this on the check)</legend>
                             <div class="form-group">
                                 <p style="color: red" id="totalText">$0</p>
-                                <input id="860974514" type="hidden" name="entry.860974514" class="form-control" placeholder="0" readonly>
+                                <input id="860974514" type="hidden" name="entry.860974514" class="form-control">
                             </div>
                         </fieldset>
 
