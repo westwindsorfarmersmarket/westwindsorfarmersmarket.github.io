@@ -19,7 +19,7 @@ function updateTotal() {
         gfb = document.getElementById("1442430695").value = "0";
         gfb = 0;
     }
-    document.getElementById("totalText").innerText = "$" + (parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb));
+    document.getElementById("totalText").innerText = "$" + (parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb)) + ` (\$${parseInt(mb) * 5}  MB, \$${parseInt(snap)} SNAP, \$${parseInt(gfb)} GFB)`;
     document.getElementById("860974514").value = parseInt(mb) * 5 + parseInt(snap) + parseInt(gfb);
 }
 
