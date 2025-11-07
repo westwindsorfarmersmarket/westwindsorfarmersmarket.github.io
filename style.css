@@ -42,8 +42,8 @@ fieldset {
     position: relative;
 }
 fieldset:before {
-    content: '🥕';
     position: absolute;
+    z-index: 1;
     left: 12px;
     top: 12px;
     font-size: 28px;
@@ -54,10 +54,12 @@ fieldset:nth-of-type(1):before { content: '🍎'; }
 fieldset:nth-of-type(2):before { content: '🥦'; }
 fieldset:nth-of-type(3):before { content: '🍞'; }
 fieldset:nth-of-type(4):before { content: '🥑'; }
-fieldset:nth-of-type(5):before { content: '💵'; }
-fieldset:nth-of-type(6):before { content: '🍋'; }
-fieldset:nth-of-type(7):before { content: '💳'; }
-fieldset:nth-of-type(8):before { content: '💬'; }
+fieldset:nth-of-type(5):before { content: '🏮'; }
+fieldset:nth-of-type(6):before { content: '📗'; }
+fieldset:nth-of-type(7):before { content: '💵'; }
+fieldset:nth-of-type(8):before { content: '🍋'; }
+fieldset:nth-of-type(9):before { content: '💳'; }
+fieldset:nth-of-type(10):before { content: '💬'; }
 
 
 .form {
