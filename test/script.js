@@ -1,0 +1,68 @@
+const today = new Date();
+var month = (today.getMonth() + 1);
+var day = today.getDate();
+document.getElementById("title").innerHTML = "WWCFM Token Collection for " + month + "/" + day + "/" + today.getFullYear();
+
+function updateTotal() {
+    var mb = document.getElementById("mb").value;
+    var snap = document.getElementById("1010502183").value;
+    var gfb = document.getElementById("1442430695").value;
+    var rp = document.getElementById("rp").value;
+    var gp = document.getElementById("gp").value;
+    if (mb == "") {
+        document.getElementById("mb").value = "0";
+        mb = 0;
+    }
+    if (snap == "") {
+        document.getElementById("1010502183").value = "0";
+        snap = 0;
+    }
+    if (gfb == "") {
+        gfb = document.getElementById("1442430695").value = "0";
+        gfb = 0;
+    }
+    if (rp == "") {
+        document.getElementById("rp").value = "0";
+        rp = 0;
+    }
+    if (gp == "") {
+        document.getElementById("gp").value = "0";
+        gp = 0;
+    }
+    document.getElementById("totalText").innerText = "$" + ((parseInt(mb) * 5) + parseInt(snap) + parseInt(gfb) + (parseInt(rp) * 5) + (parseInt(gp) * 5)) + ` (\$${parseInt(mb) * 5}  MB, \$${parseInt(snap)} SNAP, \$${parseInt(gfb)} GFB, \$${parseInt(rp) * 5} Red, \$${parseInt(gp) * 5} Green)`;
+    document.getElementById("860974514").value = (parseInt(mb) * 5) + parseInt(snap) + parseInt(gfb) + (parseInt(rp) * 5) + (parseInt(gp) * 5);
+}
+
+function validate() {
+    if (document.getElementById("1952425390").value == "") {
+        alert("please pick a vendor!");
+        return;
+    }
+    updateTotal();
+    document.getElementById("653425285").value = parseInt(document.getElementById("mb").value) * 5;
+    document.getElementById("1010502183").value = parseInt(document.getElementById("1010502183").value);
+    document.getElementById("1442430695").value = parseInt(document.getElementById("1442430695").value);
+    document.getElementById("451589529").value = parseInt(document.getElementById("rp").value) * 5;
+    document.getElementById("142253299").value = parseInt(document.getElementById("gp").value) * 5;
+    document.getElementById("main").submit();
+}
+
+function getRentDue(){
+    var vendorName = document.getElementById("1952425390").value;
+    vendorName = encodeURIComponent(vendorName);
+    var url = "https://docs.google.com/spreadsheets/d/1z82wLqfuOacuHxwXeRoMhLzRnrUlEgKM0wgvSEZLgdw/gviz/tq?tqx=out:html&tq=select A, B, C where A=%22" + vendorName + "%22";
+    document.getElementById("rentFrame").src = url;
+}
+
+fetch("https://docs.google.com/spreadsheets/d/13FllM0R-sylfZsDyvUDmW-znNi5WtQlMVNUKdoEiI8s/gviz/tq?tq=select%20A%20offset%201&gid=2015178516")
+    .then(res => res.text())
+    .then(text => {
+        njc = JSON.parse(text.substring(47).slice(0, -2));
+        console.log(njc);
+        for (var i = 0; i < njc.table.rows.length; i++) {
+            var option = document.createElement("option");
+            option.text = njc.table.rows[i].c[0].v;
+            option.value = njc.table.rows[i].c[0].v;
+            document.getElementById("1952425390").add(option);
+        }
+    });
